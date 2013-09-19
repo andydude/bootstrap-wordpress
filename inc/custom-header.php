@@ -22,8 +22,8 @@
 function twentythirteen_custom_header_setup() {
 	$args = array(
 		// Text color and image (empty to use none).
-		'default-text-color'     => '220e10',
-		'default-image'          => '%s/images/headers/circle.png',
+		'default-text-color'     => '222222',
+		'default-image'          => '%s/images/headers/boot.jpg',
 
 		// Set height and width, with a maximum value for the width.
 		'height'                 => 230,
@@ -42,20 +42,10 @@ function twentythirteen_custom_header_setup() {
 	 * %s is a placeholder for the theme template directory URI.
 	 */
 	register_default_headers( array(
-		'circle' => array(
-			'url'           => '%s/images/headers/circle.png',
-			'thumbnail_url' => '%s/images/headers/circle-thumbnail.png',
-			'description'   => _x( 'Circle', 'header image description', 'twentythirteen' )
-		),
-		'diamond' => array(
-			'url'           => '%s/images/headers/diamond.png',
-			'thumbnail_url' => '%s/images/headers/diamond-thumbnail.png',
-			'description'   => _x( 'Diamond', 'header image description', 'twentythirteen' )
-		),
-		'star' => array(
-			'url'           => '%s/images/headers/star.png',
-			'thumbnail_url' => '%s/images/headers/star-thumbnail.png',
-			'description'   => _x( 'Star', 'header image description', 'twentythirteen' )
+		'boot' => array(
+			'url'           => '%s/images/headers/boot.jpg',
+			'thumbnail_url' => '%s/images/headers/boot-thumbnail.png',
+			'description'   => _x( 'Boot', 'header image description', 'bootstrap-wordpress' )
 		),
 	) );
 }
@@ -98,6 +88,8 @@ function twentythirteen_header_style() {
 	?>
 		.site-header {
 			background: url(<?php header_image(); ?>) no-repeat scroll top;
+            background-size: 1140px;
+            background-position: 0% 80%;
 		}
 	<?php
 		endif;

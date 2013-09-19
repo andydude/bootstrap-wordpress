@@ -13,7 +13,6 @@
  * Learn more: http://codex.wordpress.org/Template_Hierarchy
  *
  * @package WordPress
- * @subpackage Twenty_Thirteen
  * @since Twenty Thirteen 1.0
  */
 

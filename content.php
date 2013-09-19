@@ -2,14 +2,19 @@
 /**
  * The default template for displaying content. Used for both single and index/archive/search.
  *
- * @package WordPress
- * @subpackage Twenty_Thirteen
- * @since Twenty Thirteen 1.0
+ * @package Bootstrap WordPress
+ * @since Bootstrap WordPress 1.0
  */
 ?>
 
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 	<header class="entry-header">
+		<div class="pull-right entry-meta">
+            <?php bswp_entry_meta(); ?>
+			<?php edit_post_link( __( '<span class=".glyphicon .glyphicon-edit"></span> Edit', 'twentythirteen' ), '<span class="btn btn-sm btn-default edit-link">', '</span>' ); ?>
+            
+		</div><!-- .entry-meta -->
+
 		<?php if ( has_post_thumbnail() && ! post_password_required() ) : ?>
 		<div class="entry-thumbnail">
 			<?php the_post_thumbnail(); ?>
@@ -23,11 +28,6 @@
 			<a href="<?php the_permalink(); ?>" rel="bookmark"><?php the_title(); ?></a>
 		</h1>
 		<?php endif; // is_single() ?>
-
-		<div class="entry-meta">
-			<?php twentythirteen_entry_meta(); ?>
-			<?php edit_post_link( __( 'Edit', 'twentythirteen' ), '<span class="edit-link">', '</span>' ); ?>
-		</div><!-- .entry-meta -->
 	</header><!-- .entry-header -->
 
 	<?php if ( is_search() ) : // Only display Excerpts for Search ?>

@@ -19,9 +19,8 @@
  * For more information on hooks, actions, and filters,
  * see http://codex.wordpress.org/Plugin_API
  *
- * @package WordPress
- * @subpackage Twenty_Thirteen
- * @since Twenty Thirteen 1.0
+ * @package Bootstrap WordPress
+ * @since Bootstrap WordPress 1.0
  */
 
 /**
@@ -35,6 +34,7 @@ if ( ! isset( $content_width ) )
  * Adds support for a custom header image.
  */
 require get_template_directory() . '/inc/custom-header.php';
+require get_template_directory() . '/nav-menu-template.php';
 
 /**
  * Twenty Thirteen only works in WordPress 3.6 or later.
@@ -72,7 +72,7 @@ function twentythirteen_setup() {
 	 * This theme styles the visual editor to resemble the theme style,
 	 * specifically font, colors, icons, and column width.
 	 */
-	add_editor_style( array( 'css/editor-style.css', 'fonts/genericons.css', twentythirteen_fonts_url() ) );
+	//add_editor_style( array( 'css/editor-style.css', twentythirteen_fonts_url() ) );
 
 	// Adds RSS feed links to <head> for posts and comments.
 	add_theme_support( 'automatic-feed-links' );
@@ -166,13 +166,13 @@ function twentythirteen_scripts_styles() {
 		wp_enqueue_script( 'jquery-masonry' );
 
 	// Loads JavaScript file with functionality specific to Twenty Thirteen.
-	wp_enqueue_script( 'twentythirteen-script', get_template_directory_uri() . '/js/functions.js', array( 'jquery' ), '2013-07-18', true );
+	//wp_enqueue_script( 'twentythirteen-script', get_template_directory_uri() . '/js/functions.js', array( 'jquery' ), '2013-07-18', true );
 
 	// Add Open Sans and Bitter fonts, used in the main stylesheet.
-	wp_enqueue_style( 'twentythirteen-fonts', twentythirteen_fonts_url(), array(), null );
+	//wp_enqueue_style( 'twentythirteen-fonts', twentythirteen_fonts_url(), array(), null );
 
 	// Add Genericons font, used in the main stylesheet.
-	wp_enqueue_style( 'genericons', get_template_directory_uri() . '/fonts/genericons.css', array(), '2.09' );
+	//wp_enqueue_style( 'genericons', get_template_directory_uri() . '/fonts/genericons.css', array(), '2.09' );
 
 	// Loads our main stylesheet.
 	wp_enqueue_style( 'twentythirteen-style', get_stylesheet_uri(), array(), '2013-07-18' );
@@ -222,28 +222,28 @@ add_filter( 'wp_title', 'twentythirteen_wp_title', 10, 2 );
  *
  * @return void
  */
-function twentythirteen_widgets_init() {
+function bswp_widgets_init() {
 	register_sidebar( array(
-		'name'          => __( 'Main Widget Area', 'twentythirteen' ),
+		'name'          => __( 'Main Widget Area', 'bootstrap-wordpress' ),
 		'id'            => 'sidebar-1',
-		'description'   => __( 'Appears in the footer section of the site.', 'twentythirteen' ),
-		'before_widget' => '<aside id="%1$s" class="widget %2$s">',
+		'description'   => __( 'Appears in the footer section of the site.', 'bootstrap-wordpress' ),
+		'before_widget' => '<aside id="%1$s" class="panel panel-default %2$s">',
 		'after_widget'  => '</aside>',
-		'before_title'  => '<h3 class="widget-title">',
-		'after_title'   => '</h3>',
+		'before_title'  => '<div class="panel-heading">',
+		'after_title'   => '</div>',
 	) );
 
 	register_sidebar( array(
-		'name'          => __( 'Secondary Widget Area', 'twentythirteen' ),
+		'name'          => __( 'Secondary Widget Area', 'bootstrap-wordpress' ),
 		'id'            => 'sidebar-2',
-		'description'   => __( 'Appears on posts and pages in the sidebar.', 'twentythirteen' ),
-		'before_widget' => '<aside id="%1$s" class="widget %2$s">',
-		'after_widget'  => '</aside>',
-		'before_title'  => '<h3 class="widget-title">',
-		'after_title'   => '</h3>',
+		'description'   => __( 'Appears on posts and pages in the sidebar.', 'bootstrap-wordpress' ),
+		'before_widget' => '<aside id="%1$s" class="panel panel-default %2$s">',
+		'after_widget'  => '</div></aside>',
+		'before_title'  => '<div class="panel-heading"><small class="panel-title">',
+		'after_title'   => '</small></div><div class="panel-body">',
 	) );
 }
-add_action( 'widgets_init', 'twentythirteen_widgets_init' );
+add_action( 'widgets_init', 'bswp_widgets_init' );
 
 if ( ! function_exists( 'twentythirteen_paging_nav' ) ) :
 /**
@@ -319,7 +319,7 @@ if ( ! function_exists( 'twentythirteen_entry_meta' ) ) :
  *
  * @return void
  */
-function twentythirteen_entry_meta() {
+function bswp_entry_meta() {
 	if ( is_sticky() && is_home() && ! is_paged() )
 		echo '<span class="featured-post">' . __( 'Sticky', 'twentythirteen' ) . '</span>';
 
@@ -329,17 +329,19 @@ function twentythirteen_entry_meta() {
 	// Translators: used between list items, there is a space after the comma.
 	$categories_list = get_the_category_list( __( ', ', 'twentythirteen' ) );
 	if ( $categories_list ) {
+        echo ' <span class="text-muted">in</span> ';
 		echo '<span class="categories-links">' . $categories_list . '</span>';
 	}
 
 	// Translators: used between list items, there is a space after the comma.
-	$tag_list = get_the_tag_list( '', __( ', ', 'twentythirteen' ) );
-	if ( $tag_list ) {
-		echo '<span class="tags-links">' . $tag_list . '</span>';
-	}
+	//$tag_list = get_the_tag_list( '', __( ', ', 'twentythirteen' ) );
+	//if ( $tag_list ) {
+	//	echo '<span class="tags-links">' . $tag_list . '</span>';
+	//}
 
 	// Post author
 	if ( 'post' == get_post_type() ) {
+        echo ' <span class="text-muted">by</span> ';
 		printf( '<span class="author vcard"><a class="url fn n" href="%1$s" title="%2$s" rel="author">%3$s</a></span>',
 			esc_url( get_author_posts_url( get_the_author_meta( 'ID' ) ) ),
 			esc_attr( sprintf( __( 'View all posts by %s', 'twentythirteen' ), get_the_author() ) ),

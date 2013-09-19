@@ -1,4 +1,4 @@
 bootstrap-wordpress
 ===================
 
-Bootstrap Wordpress Theme
+Bootstrap WordPress Theme

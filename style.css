@@ -1,5 +1,5 @@
 /*
-Theme Name: Bootstrap Wordpress
+Theme Name: Bootstrap WordPress
 Theme URI: http://andydude.github.io/bootstrap-wordpress/
 Author: Andrew Robbins
 Author URI: http://andydude.github.io/
@@ -8,5 +8,151 @@ Version: 1.0
 License: GNU General Public License v3 or later
 License URI: http://www.gnu.org/licenses/gpl-3.0.html
 Tags: black, brown, orange, tan, white, yellow, light, one-column, two-columns, right-sidebar, flexible-width, custom-header, custom-menu, editor-style, featured-images, microformats, post-formats, rtl-language-support, sticky-post, translation-ready
-Text Domain: bootstrap-wordpress
+Text Domain: bswp
 */
+
+
+/*
+ * Bootstrap WordPress (BSWP)-specific styles
+ */
+
+.bswp-search-form { 
+  margin-right: -30px;
+}
+
+.bswp-search-query {
+  margin-right: 0;
+  border-top-left-radius: 16px;
+  border-bottom-left-radius: 16px;
+  border-top-right-radius: 0;
+  border-bottom-right-radius: 0;
+}
+
+.bswp-search-btn {
+  margin-left: -4px;
+  border-top-left-radius: 0;
+  border-bottom-left-radius: 0;
+  border-top-right-radius: 16px;
+  border-bottom-right-radius: 16px;
+  padding-left: 6px;
+  padding-right: 10px;
+}
+
+.navbar .bswp-navpair-left { 
+  padding-right: 0 !important;
+  float: left;
+}
+
+.navbar .bswp-navpair-right {
+  padding-left: 5px !important;
+  float: left;
+}
+
+/*
+ * General styles
+ */
+
+.jumbotron>a.btn-link {
+  color: #333;
+  text-decoration: none;
+}
+
+.jumbotron>a:focus.btn-link,
+.jumbotron>a:hover.btn-link {
+  color: #000;
+}
+
+.site-content>article {
+  margin-bottom: 50px;
+}
+.form-allowed-tags {
+  display: none; 
+}
+
+.panel-title.comment-reply-title {
+  font-size: 24px;
+}
+
+.panel-primary a.btn-link,
+.panel-primary a.btn-link:focus,
+.panel-primary a.btn-link:hover {
+  color: #fff;
+}
+
+ol.children,
+ul.children {
+  padding-left: 0;
+}
+/*
+li.media {
+  margin-top: 0 !important;
+  border-collapse: collapse;
+}
+.media-body .panel {
+  margin-bottom: 0 !important;
+}
+*/
+
+.media-body .panel-heading .pull-right {
+  margin-top: -4px;
+}
+
+.required { 
+  color: #b94a48; /* Bootstrap's text-danger */
+}
+.site-info {
+  text-align: center;
+}
+.site-info a {
+  color: #999;
+}
+.site-info a.bswp-brand,
+.bswp-brand {  
+  color: #563d7c;
+}
+
+.btn a,
+.btn a:focus,
+.btn a:hover {
+  color: black;
+  text-decoration: none;
+}
+
+/* These widgets are built-in to the navigation bar */
+
+.widget_search {
+  display: none;
+}
+
+/* This is pure Bootstrap with .list-group -> ul and .list-group-item -> li */
+
+.panel > ul {
+  padding-left: 0;
+  margin-bottom: 0;
+}
+
+.panel > ul li {
+  position: relative;
+  display: block;
+  padding: 10px 15px;
+  margin-bottom: -1px;
+  background-color: #ffffff;
+  border: 1px solid #dddddd;
+  border-width: 1px 0;
+}
+
+.panel > ul li:first-child {
+  border-top-right-radius: 0;
+  border-top-left-radius: 0;
+}
+
+.panel > ul li:last-child {
+  margin-bottom: 0;
+  border-bottom: 0;
+  border-bottom-right-radius: 4px;
+  border-bottom-left-radius: 4px;
+}
+
+.panel-heading + ul li:first-child {
+  border-top-width: 0;
+}

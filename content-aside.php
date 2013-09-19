@@ -2,9 +2,8 @@
 /**
  * The template for displaying posts in the Aside post format.
  *
- * @package WordPress
- * @subpackage Twenty_Thirteen
- * @since Twenty Thirteen 1.0
+ * @package Bootstrap WordPress
+ * @since Bootstrap WordPress 1.0
  */
 ?>
 

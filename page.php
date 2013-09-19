@@ -6,9 +6,8 @@
  * Please note that this is the WordPress construct of pages and that other
  * 'pages' on your WordPress site will use a different template.
  *
- * @package WordPress
- * @subpackage Twenty_Thirteen
- * @since Twenty Thirteen 1.0
+ * @package Bootstrap WordPress
+ * @since Bootstrap WordPress 1.0
  */
 
 get_header(); ?>
@@ -21,6 +20,10 @@ get_header(); ?>
 
 				<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 					<header class="entry-header">
+		                <div class="pull-right entry-meta">
+			                <?php edit_post_link( __( '<span class=".glyphicon .glyphicon-edit"></span> Edit', 'twentythirteen' ), '<span class="btn btn-sm btn-default edit-link">', '</span>' ); ?>
+		                </div><!-- .entry-meta -->
+
 						<?php if ( has_post_thumbnail() && ! post_password_required() ) : ?>
 						<div class="entry-thumbnail">
 							<?php the_post_thumbnail(); ?>
@@ -34,10 +37,6 @@ get_header(); ?>
 						<?php the_content(); ?>
 						<?php wp_link_pages( array( 'before' => '<div class="page-links"><span class="page-links-title">' . __( 'Pages:', 'twentythirteen' ) . '</span>', 'after' => '</div>', 'link_before' => '<span>', 'link_after' => '</span>' ) ); ?>
 					</div><!-- .entry-content -->
-
-					<footer class="entry-meta">
-						<?php edit_post_link( __( 'Edit', 'twentythirteen' ), '<span class="edit-link">', '</span>' ); ?>
-					</footer><!-- .entry-meta -->
 				</article><!-- #post -->
 
 				<?php comments_template(); ?>

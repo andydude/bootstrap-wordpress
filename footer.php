@@ -20,9 +20,9 @@
             <div class="col-xs-12">
                 <div class="panel panel-default">
                     <div class="panel-body text-muted site-info">
-					    <?php do_action( 'twentythirteen_credits' ); ?>
+					    <?php do_action( 'bswp_credits' ); ?>
                         <span>Proudly powered by <a class="bswp-brand" href="http://getbootstrap.com/">Bootstrap</a>
-					    <a href="<?php echo esc_url( __( 'http://wordpress.org/', 'twentythirteen' ) ); ?>" title="<?php esc_attr_e( 'Semantic Personal Publishing Platform', 'twentythirteen' ); ?>"><?php printf( __( '%s', 'twentythirteen' ), 'WordPress' ); ?></a></span>
+					    <a href="<?php echo esc_url( __( 'http://wordpress.org/', 'bswp' ) ); ?>" title="<?php esc_attr_e( 'Semantic Personal Publishing Platform', 'bswp' ); ?>"><?php printf( __( '%s', 'bswp' ), 'WordPress' ); ?></a></span>
                     </div><!-- .site-info -->
 				</div><!-- .panel -->
             </div><!-- .col -->

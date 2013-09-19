@@ -21,7 +21,7 @@ get_header(); ?>
 				<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 					<header class="entry-header">
 		                <div class="pull-right entry-meta">
-			                <?php edit_post_link( __( '<span class=".glyphicon .glyphicon-edit"></span> Edit', 'twentythirteen' ), '<span class="btn btn-sm btn-default edit-link">', '</span>' ); ?>
+			                <?php edit_post_link( __( '<span class=".glyphicon .glyphicon-edit"></span> Edit', 'bswp' ), '<span class="btn btn-sm btn-default edit-link">', '</span>' ); ?>
 		                </div><!-- .entry-meta -->
 
 						<?php if ( has_post_thumbnail() && ! post_password_required() ) : ?>
@@ -35,7 +35,7 @@ get_header(); ?>
 
 					<div class="entry-content">
 						<?php the_content(); ?>
-						<?php wp_link_pages( array( 'before' => '<div class="page-links"><span class="page-links-title">' . __( 'Pages:', 'twentythirteen' ) . '</span>', 'after' => '</div>', 'link_before' => '<span>', 'link_after' => '</span>' ) ); ?>
+						<?php wp_link_pages( array( 'before' => '<div class="page-links"><span class="page-links-title">' . __( 'Pages:', 'bswp' ) . '</span>', 'after' => '</div>', 'link_before' => '<span>', 'link_after' => '</span>' ) ); ?>
 					</div><!-- .entry-content -->
 				</article><!-- #post -->
 

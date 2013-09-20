@@ -4,9 +4,8 @@
  *
  * Displays all of the <head> section and everything up till <div class="site-main">
  *
- * @package WordPress
- * @subpackage Twenty_Thirteen
- * @since Twenty Thirteen 1.0
+ * @package Bootstrap WordPress
+ * @since Bootstrap WordPress 1.0
  */
 ?><!DOCTYPE html>
 <!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7" <?php language_attributes(); ?>> <![endif]-->
@@ -34,11 +33,11 @@
     <?php wp_head(); ?>
 </head>
 <body <?php body_class(); ?>>
-    <!--[if lt IE 7]>
+    <!--[if lt IE 9]>
         <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
     <![endif]-->
 
-	<div class="navbar navbar-inverse navbar-static-top">
+	<div class="navbar navbar-default navbar-static-top">
         <div class="container navbar-container">
             <div class="navbar-header">
                 <button class="navbar-toggle" type="button" data-toggle="collapse" data-target=".bswp-navigation">

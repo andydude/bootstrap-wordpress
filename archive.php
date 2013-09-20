@@ -12,9 +12,8 @@
  *
  * Learn more: http://codex.wordpress.org/Template_Hierarchy
  *
- * @package WordPress
- * @subpackage Twenty_Thirteen
- * @since Twenty Thirteen 1.0
+ * @package Bootstrap WordPress
+ * @since Bootstrap WordPress 1.0
  */
 
 get_header(); ?>
@@ -26,13 +25,13 @@ get_header(); ?>
 			<header class="archive-header">
 				<h1 class="archive-title"><?php
 					if ( is_day() ) :
-						printf( __( 'Daily Archives: %s', 'twentythirteen' ), get_the_date() );
+						printf( __( 'Daily Archives: %s', 'bswp' ), get_the_date() );
 					elseif ( is_month() ) :
-						printf( __( 'Monthly Archives: %s', 'twentythirteen' ), get_the_date( _x( 'F Y', 'monthly archives date format', 'twentythirteen' ) ) );
+						printf( __( 'Monthly Archives: %s', 'bswp' ), get_the_date( _x( 'F Y', 'monthly archives date format', 'bswp' ) ) );
 					elseif ( is_year() ) :
-						printf( __( 'Yearly Archives: %s', 'twentythirteen' ), get_the_date( _x( 'Y', 'yearly archives date format', 'twentythirteen' ) ) );
+						printf( __( 'Yearly Archives: %s', 'bswp' ), get_the_date( _x( 'Y', 'yearly archives date format', 'bswp' ) ) );
 					else :
-						_e( 'Archives', 'twentythirteen' );
+						_e( 'Archives', 'bswp' );
 					endif;
 				?></h1>
 			</header><!-- .archive-header -->
@@ -42,7 +41,7 @@ get_header(); ?>
 				<?php get_template_part( 'content', get_post_format() ); ?>
 			<?php endwhile; ?>
 
-			<?php twentythirteen_paging_nav(); ?>
+			<?php bswp_paging_nav(); ?>
 
 		<?php else : ?>
 			<?php get_template_part( 'content', 'none' ); ?>

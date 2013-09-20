@@ -5,9 +5,9 @@
  * Contains footer content and the closing of the
  * #main and #page div elements.
  *
- * @package WordPress
+ * @package Bootstrap WordPress
  * @subpackage Twenty_Thirteen
- * @since Twenty Thirteen 1.0
+ * @since Bootstrap WordPress 1.0
  */
 ?>
 
@@ -18,8 +18,8 @@
         	
                 <div class="panel panel-default">
                     <div class="panel-body site-info">
-					    <?php do_action( 'twentythirteen_credits' ); ?>
-					    <a href="<?php echo esc_url( __( 'http://wordpress.org/', 'twentythirteen' ) ); ?>" title="<?php esc_attr_e( 'Semantic Personal Publishing Platform', 'twentythirteen' ); ?>"><?php printf( __( 'Proudly powered by %s', 'twentythirteen' ), 'WordPress' ); ?></a>
+					    <?php do_action( 'bswp_credits' ); ?>
+					    <a href="<?php echo esc_url( __( 'http://wordpress.org/', 'bswp' ) ); ?>" title="<?php esc_attr_e( 'Semantic Personal Publishing Platform', 'bswp' ); ?>"><?php printf( __( 'Proudly powered by %s', 'bswp' ), 'WordPress' ); ?></a>
                     </div><!-- .site-info -->
 				</div><!-- .panel -->
 			</footer><!-- .site-footer -->

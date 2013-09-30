@@ -85,16 +85,17 @@ class BSWP_Walker_Nav_Menu extends Walker {
             throw new Exception("Bootstrap WordPress fobids navigation menu depth 2");
         }
 
-        /* BSWP-specific: Check if the item should be a Bootstrap .dropdown */
-        $nchildren = bswp_count_number_of_children($item->ID);
-        $is_dropdown = $nchildren > 0;
 
 		$classes = empty( $item->classes ) ? array() : (array) $item->classes;
 		$classes[] = 'menu-item-' . $item->ID;
 
+        /* BSWP-specific: Check if the item should be a Bootstrap .dropdown */
+        $nchildren = bswp_count_number_of_children($item->ID);
+        $is_dropdown = $nchildren > 0;
         if ($is_dropdown) {
             $classes[] = 'dropdown';
         }
+
 		$class_names = join( ' ', apply_filters( 'nav_menu_css_class', array_filter( $classes ), $item, $args ) );
 		$class_names = $class_names ? ' class="' . esc_attr( $class_names ) . '"' : '';
 
@@ -184,15 +185,15 @@ function bswp_nav_menu( $args = array() ) {
 
     /* TODO: check if depth is too big. */
 
-	$defaults = array( 
-                      'menu' => 'A', 
+	$defaults = array(
                       'container' => 'div', 
                       'container_class' => 'B', 
                       'container_id' => 'C', 
+                      'menu' => 'ul', 
                       'menu_class' => 'nav navbar-nav', 
                       'menu_id' => 'D',
                       'echo' => true, 
-                      'fallback_cb' => 'wp_page_menu', 
+                      'fallback_cb' => 'bswp_page_menu', 
                       'before' => '', 
                       'after' => '',
                       'link_before' => '', 
@@ -393,6 +394,13 @@ function bswp_menu_item_classes_by_context( &$menu_items ) {
 		$classes[] = 'menu-item-type-' . $menu_item->type;
 		$classes[] = 'menu-item-object-' . $menu_item->object;
 
+        /* BSWP-specific: Check if the item should be a Bootstrap .dropdown */
+        $nchildren = bswp_count_number_of_children($menu_item->ID);
+        $is_dropdown = $nchildren > 0;
+        if ($is_dropdown) {
+            $classes[] = 'dropdown';
+        }
+
 		// if the menu item corresponds to a taxonomy term for the currently-queried non-hierarchical post object
 		if ( $wp_query->is_singular && 'taxonomy' == $menu_item->type && in_array( $menu_item->object_id, $possible_object_parents ) ) {
 			$active_parent_object_ids[] = (int) $menu_item->object_id;
@@ -418,6 +426,13 @@ function bswp_menu_item_classes_by_context( &$menu_items ) {
 			) {
 				$active_ancestor_item_ids[] = $_anc_id;
 			}
+
+            /* BSWP-specific: Check if the item should be a Bootstrap .dropdown */
+            $nchildren = bswp_count_number_of_children($menu_item->ID);
+            $is_dropdown = $nchildren > 0;
+            if ($is_dropdown) {
+                $classes[] = 'dropdown';
+            }
 
 			if ( 'post_type' == $menu_item->type && 'page' == $menu_item->object ) {
 				// Back compat classes for pages to match wp_page_menu()

@@ -34,6 +34,7 @@ if ( ! isset( $content_width ) )
  * Adds support for a custom header image.
  */
 require get_template_directory() . '/inc/custom-header.php';
+require get_template_directory() . '/post-template.php';
 require get_template_directory() . '/nav-menu-template.php';
 
 /**

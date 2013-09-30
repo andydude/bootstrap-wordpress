@@ -2,10 +2,12 @@
 	<li class="dropdown">
 	    <a href="" class="dropdown-toggle widget-title" data-toggle="dropdown">Meta <span class="caret"></span></a>
 	    <ul class="dropdown-menu" role="menu">
-		    <li><a href="http://localhost/~alt/wordpress/wp-admin/">Site Admin</a></li>			<li><a href="http://localhost/~alt/wordpress/wp-login.php?action=logout&amp;_wpnonce=56bcedba06">Log out</a></li>
-		    <li><a href="http://localhost/~alt/wordpress/?feed=rss2" title="Syndicate this site using RSS 2.0">Entries <abbr title="Really Simple Syndication">RSS</abbr></a></li>
-		    <li><a href="http://localhost/~alt/wordpress/?feed=comments-rss2" title="The latest comments to all posts in RSS">Comments <abbr title="Really Simple Syndication">RSS</abbr></a></li>
+	        <?php wp_register(); ?>
+	        <li><?php wp_loginout(); ?></li>
+	        <li><a href="<?php bloginfo('rss2_url'); ?>" title="<?php echo esc_attr(__('Syndicate this site using RSS 2.0')); ?>"><?php _e('Entries <abbr title="Really Simple Syndication">RSS</abbr>'); ?></a></li>
+	<li><a href="<?php bloginfo('comments_rss2_url'); ?>" title="<?php echo esc_attr(__('The latest comments to all posts in RSS')); ?>"><?php _e('Comments <abbr title="Really Simple Syndication">RSS</abbr>'); ?></a></li>
 		    <li><a href="http://wordpress.org/" title="Powered by WordPress, state-of-the-art semantic personal publishing platform.">WordPress.org</a></li>
+	        <?php wp_meta(); ?>
 	    </ul>
 	</li>
 </ul>

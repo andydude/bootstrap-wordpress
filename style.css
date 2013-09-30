@@ -120,6 +120,7 @@ li.media {
 
 /* These widgets are built-in to the navigation bar */
 
+.widget_meta,
 .widget_search {
   display: none;
 }

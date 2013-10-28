@@ -43,7 +43,7 @@
 			return;
 		}
 
-		$( '.menu-toggle' ).on( 'click.twentythirteen', function() {
+		$( '.menu-toggle' ).on( 'click.bswp', function() {
 			nav.toggleClass( 'toggled-on' );
 		} );
 	} )();
@@ -54,7 +54,7 @@
 	 *
 	 * @link http://www.nczonline.net/blog/2013/01/15/fixing-skip-to-content-links/
 	 */
-	_window.on( 'hashchange.twentythirteen', function() {
+	_window.on( 'hashchange.bswp', function() {
 		var element = document.getElementById( location.hash.substring( 1 ) );
 
 		if ( element ) {

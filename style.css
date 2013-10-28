@@ -54,7 +54,7 @@ Text Domain: bswp
 
 .jumbotron>a.btn-link {
   color: #333;
-  text-shadow: 0 0 0.5em white;
+  text-shadow: 0.1em 0.1em 1em white;
   text-decoration: none;
 }
 

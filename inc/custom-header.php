@@ -88,7 +88,7 @@ function bswp_header_style() {
 	?>
 		.site-header {
 			background: url(<?php header_image(); ?>) no-repeat scroll top;
-            background-position: 0% 80%;
+            color: white;
 		}
 	<?php
 		endif;

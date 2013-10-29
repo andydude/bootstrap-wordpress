@@ -1,0 +1,159 @@
+/*
+ * Drosera Bootstrap additions
+ */
+
+a { 
+  color: #468846;
+}
+
+a:focus,
+a:hover { 
+  color: #264826;
+}
+
+body {
+  background-color: #FFF;
+  background-attachment: fixed;
+  background-image: -webkit-linear-gradient(top, #EEE 0%, #FFF 300px);
+  background-image:    -moz-linear-gradient(top, #EEE 0%, #FFF 300px);
+  background-image:         linear-gradient(top, #EEE 0%, #FFF 300px);
+}
+
+body.ds-navbar-body {
+  margin-top: 47px; /* flush with bottom of navbar */
+  padding-top: 36px;
+}
+
+.dropdown-menu > li > a:hover,
+.dropdown-menu > li > a:focus {
+  background-color: #dff0d8 !important;
+}
+
+.dropdown-menu > .active > a,
+.dropdown-menu > .active > a:hover,
+.dropdown-menu > .active > a:focus {
+  background-color: #dff0d8 !important;
+}
+
+.jumbotron hr { 
+  border-color: #CCC;
+}
+
+.ds-search-form { 
+  margin-right: -15px;
+}
+.ds-search-query {
+  margin-right: 0;
+  border-top-left-radius: 16px;
+  border-bottom-left-radius: 16px;
+  border-top-right-radius: 0;
+  border-bottom-right-radius: 0;
+}
+.ds-search-btn {
+  margin-left: -4px;
+  border-top-left-radius: 0;
+  border-bottom-left-radius: 0;
+  border-top-right-radius: 16px;
+  border-bottom-right-radius: 16px;
+  padding-left: 6px;
+  padding-right: 10px;
+}
+/*
+  border-color: #000;
+  background-color: #121;
+  background-image: -webkit-linear-gradient(top, #121, 0%, #242, 100%);
+  background-image:    -moz-linear-gradient(top, #121  0%, #242  100%);
+  background-image:      linear-gradient(180deg, #121  0%, #242  100%);
+
+.ds-search-btn-bad-colors:focus,
+.ds-search-btn-bad-colors:hover {
+  border-color: #121;
+  background-image: -webkit-linear-gradient(top, #242, 0%, #121, 100%);
+  background-image:    -moz-linear-gradient(top, #242  0%, #121  100%);
+  background-image:      linear-gradient(180deg, #242  0%, #121  100%);
+}
+*/
+
+.ds-navbar {
+  background-color: #222222;
+  background-image: -webkit-linear-gradient(top, #242, 0%, #020, 50%, #000, 100%);
+  background-image:    -moz-linear-gradient(top, #242  0%, #020  50%, #000  100%);
+  background-image:      linear-gradient(180deg, #242  0%, #020  50%, #000  100%);
+  box-shadow: 0 0 8px 0 #000;
+  border: 0;
+}
+
+.ds-navbar .navbar-collapse,
+.ds-navbar .navbar-form { 
+  border-width: 0;
+}
+
+.ds-navbar .navbar-brand {
+  color: #fff;
+}
+
+@media (min-width: 768px) {
+  .ds-navbar .navbar-brand {
+    color: #242;
+  }
+}
+
+.navbar-brand { 
+  font-weight: bold;
+}
+
+.ds-navbar .navbar-brand:hover,
+.ds-navbar .navbar-brand:focus {
+  color: #cfc;
+  background-color: transparent;
+}
+
+.ds-navbar .navbar-text {
+  color: #474;
+}
+
+.ds-navbar .navbar-nav > li > a {
+  color: #474;
+}
+
+.ds-navbar .navbar-nav > li > a:hover,
+.ds-navbar .navbar-nav > li > a:focus {
+  color: #cfc;
+  background-color: transparent;
+}
+
+.panel > ul {
+  padding-left: 0;
+  margin-bottom: 0;
+}
+
+.panel > ul li {
+  text-decoration: none;
+  position: relative;
+  display: block;
+  padding: 10px 15px;
+  margin-bottom: -1px;
+  background-color: #ffffff;
+  border: 1px solid #dddddd;
+  border-width: 1px 0;
+}
+
+.panel > ul li:first-child {
+  border-top-right-radius: 0;
+  border-top-left-radius: 0;
+}
+
+.panel > ul li:last-child {
+  margin-bottom: 0;
+  border-bottom-right-radius: 4px;
+  border-bottom-left-radius: 4px;
+  border-bottom: 0;
+}
+
+.ds-navbar .ds-navpair-title { 
+  padding-right: 1px !important;
+}
+
+.ds-navbar .ds-navpair-arrow { 
+  padding-left: 1px !important;
+}

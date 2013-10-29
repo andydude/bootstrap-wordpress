@@ -11,13 +11,13 @@
 	    </ul>
 	</li>
 </ul>
-<form class="navbar-form navbar-right bswp-search-form hidden-xs" action="<?php esc_url( home_url( '/' ) ); ?>" role="search">
-    <fieldset class="bswp-search-fieldset">
+<form class="navbar-form navbar-right ds-search-form hidden-xs" action="<?php esc_url( home_url( '/' ) ); ?>" role="search">
+    <fieldset class="ds-search-fieldset">
         <legend class="sr-only"><?php echo _x( 'Search for:', 'label' ); ?></legend>
-        <span class="form-group bswp-search-query-group">
+        <span class="form-group ds-search-query-group">
             <label class="sr-only" for="bswp_search_query">Query</label>
-            <input class="form-control bswp-search-query" id="bswp_search_query" name="s" type="search" placeholder="<?php echo esc_attr_x( 'Search &hellip;', 'placeholder' ); ?>">
+            <input class="form-control ds-search-query" id="bswp_search_query" name="s" type="search" placeholder="<?php echo esc_attr_x( 'Search &hellip;', 'placeholder' ); ?>">
         </span>
-        <button class="btn btn-primary bswp-search-btn" type="submit"><span class="glyphicon glyphicon-search"></span></button>
+        <button class="btn btn-success ds-search-btn" type="submit"><span class="glyphicon glyphicon-search"></span></button>
     </fieldset>
 </form>

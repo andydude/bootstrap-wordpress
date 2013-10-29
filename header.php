@@ -23,6 +23,7 @@
     <link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/css/bootstrap-3.0.0.min.css">
     <link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/css/bootstrap-theme-3.0.0.min.css">
     <link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/css/h5bp-browsehappy.css">
+    <link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/css/drosera-bootstrap.css">
     <script src="<?php echo get_template_directory_uri(); ?>/js/vendor/modernizr-2.6.2.min.js"></script>
     <script src="<?php echo get_template_directory_uri(); ?>/js/vendor/require-2.1.8.min.js"></script>
     <script src="<?php echo get_template_directory_uri(); ?>/js/vendor/jquery-1.10.2.min.js"></script>
@@ -37,7 +38,7 @@
         <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
     <![endif]-->
 
-	<div class="navbar navbar-default navbar-static-top">
+	<div class="navbar navbar-inverse navbar-static-top ds-navbar">
         <div class="container navbar-container">
             <div class="navbar-header">
                 <button class="navbar-toggle" type="button" data-toggle="collapse" data-target=".bswp-navigation">
